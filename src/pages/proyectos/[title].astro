@@ -1,0 +1,72 @@
+---
+const {title} = Astro.params
+import Layout from '@layouts/Layout.astro'
+import proyectosArray from '@utils/proyectos.ts'
+import { Image, getImage } from 'astro:assets';
+
+const objetosFiltrados = proyectosArray.filter(item => item.titulo === title);
+const titulo = objetosFiltrados[0].titulo
+const description = objetosFiltrados[0].description
+const img = objetosFiltrados[0].img
+const imgW = objetosFiltrados[0].imgW
+const imgH = objetosFiltrados[0].imgH
+
+const url = await getImage({src: img, format: 'jpg'})
+
+
+console.log(objetosFiltrados[0])
+console.log(img)
+export const prerender = false
+---
+<Layout title='Publicacion'>
+    <header class="header">
+        <Image
+        src={url.src}
+        alt={titulo}
+        width={imgW} 
+        height={imgH}
+        class='Img'
+        />
+    </header>
+    <article>
+        <h1>{titulo}</h1>
+        <p>{description}</p>
+    </article>
+</Layout>
+
+<style lang="scss">
+
+    .header{
+        width: 100%;
+        max-height: 300px;
+        overflow-y: hidden;
+        
+        .Img{
+            border-radius: 3px;
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+        }
+    }
+
+    article{
+        padding: 20px;
+
+        h1{
+            text-align: center;
+            color: rgb(220, 67, 20);
+            text-transform: uppercase;
+            font-size: clamp(1.5rem, 1.8rem, 2.2rem );
+        }
+
+        p{
+            max-width: 70ch;
+            font-weight: 500;
+            margin: 0 auto;
+            font-size: clamp(0.8rem, 1.1rem, 1.3rem );
+            text-wrap: balance;
+            white-space: pre-line;
+            color: #100f0f;
+        }
+    }
+</style>

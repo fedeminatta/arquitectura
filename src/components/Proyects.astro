@@ -1,0 +1,82 @@
+---
+import { getImage } from "astro:assets";
+interface Props {
+    title: string;
+    description: string;
+    img: ImageMetadata | string;
+}
+
+const {title, description, img} = Astro.props
+
+const optimizedBackground = await getImage({src: img, format: 'jpg'})
+---
+
+<a href={`/proyectos/${title}`}>
+    <article style={`background-image: url(${optimizedBackground.src});`}>
+        <div class="text">
+            <h2>{title}</h2>
+            <p>{description}</p>
+        </div>
+    </article>
+</a>
+
+<style lang="scss">
+
+    article{
+        border-radius: 6px;
+        width: 400px;
+        background: center/cover;
+        background-size: cover;
+        background-color: #fff;
+        max-width: 90%;
+        height: 400px;
+        position: relative;
+        overflow: hidden;
+        color: #fff;
+        padding: 20px;
+        cursor: pointer;
+        &:hover{
+            .text{
+                opacity: 1;
+                transform: translateY(0%);
+            }
+        }
+
+        a{
+            text-decoration: none;
+            color: #fff;
+        }
+
+        .text{
+            padding: 30px;
+            background-color: #0000009a;
+            width: 100%;
+            height: auto;
+            overflow: hidden;
+            opacity: 0;
+            transition: all .2s;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            transform: translateY(70%);
+            
+            
+            p{
+                display: inline-block;
+                width: 100%;
+                color: #d5d5d5;
+                text-wrap: balance;
+                white-space: nowrap;
+                font-weight: 500;
+                margin-top: 10px;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+
+            h2{
+                text-align: center;
+            }
+        }
+        
+    }
+</style>

@@ -1,0 +1,34 @@
+---
+// import './global.css'
+import Layout from '../layouts/Layout.astro';
+import Proyects from '../components/Proyects.astro';
+import proyectosArray from '@utils/proyectos';
+---
+
+<Layout title="Arquitectura demo">
+	<section class="proyectos">
+		{proyectosArray.map(item => (
+			<Proyects
+				title={item.titulo}
+				description={item.description}
+				img={item.img}
+			/>
+		 ))}
+	</section>
+</Layout>
+
+<style lang="scss">
+	.proyectos{
+		padding: 40px;
+		display: flex;
+		flex-wrap: wrap;
+		gap: 30px;
+		justify-content: center;
+	}
+
+	@media screen and (max-width: 580px) {
+		.proyectos{
+			padding: 0px;
+		}
+	}
+</style>
