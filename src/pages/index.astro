@@ -7,13 +7,13 @@ import proyectosArray from '@utils/proyectos';
 
 <Layout title="Arquitectura demo">
 	<section class="proyectos">
-		{proyectosArray.map(item => (
+		{proyectosArray.slice(0,2).map(item => (
 			<Proyects
 				title={item.titulo}
 				description={item.description}
 				img={item.img}
 			/>
-		 ))}
+		))}
 	</section>
 </Layout>
 
