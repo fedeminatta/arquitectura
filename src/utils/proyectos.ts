@@ -1,11 +1,11 @@
-import img1 from '@img/img1.jpg';
+import img1 from "@img/img1.jpg";
 
 interface ProyectoObj {
-    titulo: string;
-    description: string;
-    img: ImageMetadata | string;
-    imgW: number;
-    imgH: number;
+  titulo: string;
+  description: string;
+  img: ImageMetadata | string;
+  imgW: number;
+  imgH: number;
 }
 
 const description1 = `En el corazón de la ciudad, surge un proyecto arquitectónico innovador que redefine la interacción entre el entorno urbano y la funcionalidad estética. Este ambicioso proyecto, concebido por un equipo multidisciplinario de arquitectos visionarios, busca fusionar la modernidad con la rica historia cultural del lugar. La premisa fundamental del diseño radica en la creación de un espacio que no solo sea visualmente impactante, sino que también sirva como un punto de convergencia para la comunidad, inspirando la colaboración y el intercambio social.
@@ -26,27 +26,27 @@ La innovación sostenible es el núcleo de esta empresa arquitectónica, donde l
 La fachada del edificio, con su diseño único y dinámico, se convierte en una expresión artística que dialoga con el entorno circundante. La interacción de luces y sombras a lo largo del día crea una experiencia visual cambiante que redefine la percepción del espacio. En resumen, este proyecto arquitectónico no solo busca redefinir la ciudad desde un punto de vista estético, sino también fomentar una conexión más profunda entre las personas y su entorno, a través de un equilibrio armonioso entre la forma, la función y la sostenibilidad.`;
 
 const proyectosArray: ProyectoObj[] = [
-    {
-        titulo: 'Proyecto 1',
-        description: description1,
-        img: img1,
-        imgW: img1.width,
-        imgH: img1.height,
-    },
-    {
-        titulo: 'Proyecto 2',
-        description: description2,
-        img: img1,
-        imgW: img1.width,
-        imgH: img1.height,
-    },
-    {
-        titulo: 'Proyecto 3',
-        description: description3,
-        img: img1,
-        imgW: img1.width,
-        imgH: img1.height,
-    },
+  {
+    titulo: "Proyecto 1",
+    description: description1,
+    img: img1,
+    imgW: img1.width,
+    imgH: img1.height,
+  },
+  {
+    titulo: "Proyecto 2",
+    description: description2,
+    img: img1,
+    imgW: img1.width,
+    imgH: img1.height,
+  },
+  {
+    titulo: "Proyecto 3",
+    description: description3,
+    img: img1,
+    imgW: img1.width,
+    imgH: img1.height,
+  },
 ];
 
 export default proyectosArray;
