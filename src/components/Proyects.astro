@@ -11,24 +11,31 @@ const { title, description, img } = Astro.props;
 const optimizedBackground = await getImage({ src: img, format: 'webp' });
 ---
 
-<a href={`/proyecto/${title}`}>
-  <article style={`background-image: url(${optimizedBackground.src});`}>
-    <div class="text">
-      <h2>{title}</h2>
-      <p>{description}</p>
-    </div>
-  </article>
-</a>
+<div class="card">
+  <a href={`/proyecto/${title}`}>
+    <article style={`background-image: url(${optimizedBackground.src});`}>
+      <div class="text">
+        <h2>{title}</h2>
+        <p>{description}</p>
+      </div>
+    </article>
+  </a>
+</div>
 
 <style lang="scss">
+  .card {
+    width: 400px;
+    max-width: 90%;
+    height: auto;
+    aspect-ratio: 1/1;
+  }
   article {
     border-radius: 6px;
-    width: 400px;
+    width: 100%;
     background: center/cover;
     background-size: cover;
     background-color: #fff;
-    max-width: 90%;
-    height: 400px;
+    height: 100%;
     position: relative;
     overflow: hidden;
     color: #fff;
@@ -73,6 +80,18 @@ const optimizedBackground = await getImage({ src: img, format: 'webp' });
 
       h2 {
         text-align: center;
+      }
+    }
+
+    @media screen and (max-width: 380px) {
+      .text {
+        padding: 10px;
+        h2 {
+          font-size: 18px;
+        }
+        p {
+          font-size: 16px;
+        }
       }
     }
   }
