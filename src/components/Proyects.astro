@@ -8,7 +8,7 @@ interface Props {
 
 const { title, description, img } = Astro.props;
 
-const optimizedBackground = await getImage({ src: img, format: 'jpg' });
+const optimizedBackground = await getImage({ src: img, format: 'webp' });
 ---
 
 <a href={`/proyecto/${title}`}>

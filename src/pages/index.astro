@@ -3,9 +3,11 @@
 import Layout from '@layouts/Layout.astro';
 import Proyects from '@components/Proyects.astro';
 import proyectosArray from '@utils/proyectos';
+import headerImg from '@img/header.webp';
 ---
 
 <Layout title="Arquitectura demo">
+  <img src={headerImg.src} alt="header imagen" />
   <section class="proyectos">
     {
       proyectosArray

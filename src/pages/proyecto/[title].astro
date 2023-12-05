@@ -22,7 +22,7 @@ if (objetosFiltrados.length > 0) {
   imgW = objetosFiltrados[0].imgW;
   imgH = objetosFiltrados[0].imgH;
 
-  url = await getImage({ src: img, format: 'jpg' });
+  url = await getImage({ src: img, format: 'webp' });
 }
 export const prerender = false;
 ---
@@ -50,7 +50,7 @@ export const prerender = false;
 <style lang="scss">
   .header {
     width: 100%;
-    max-height: 300px;
+    max-height: 450px;
     overflow-y: hidden;
 
     .Img {
