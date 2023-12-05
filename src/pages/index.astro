@@ -8,7 +8,7 @@ import headerImg from '@img/header.webp';
 
 <Layout title="Arquitectura demo">
   <header>
-    <h1>Aquitectura</h1>
+    <h1>Arquitectura</h1>
     <img src={headerImg.src} alt="header imagen" />
   </header>
   <section class="proyectos">
@@ -29,22 +29,30 @@ import headerImg from '@img/header.webp';
 <style lang="scss">
   header {
     position: relative;
-    height: 450px;
+    aspect-ratio: 16/9;
+    max-height: 70vh;
     width: 100%;
     overflow: hidden;
 
     h1 {
       z-index: 100;
       position: absolute;
-      left: 50%;
-      bottom: 50%;
-      color: #fff;
+      top: 50%;
+      left: 60%;
+      transform: translate(-50%, -50%);
+      color: #ec2165;
+      text-shadow: 3px 3px #600221;
+      font-size: clamp(1.125rem, -0.0469rem + 8.22vw, 8.025rem);
+      text-transform: uppercase;
+      font-weight: 800;
+      font-style: italic;
     }
     img {
       object-fit: cover;
       object-position: center;
       width: 100%;
       height: 100%;
+      filter: brightness(85%);
     }
   }
   .proyectos {
@@ -57,7 +65,7 @@ import headerImg from '@img/header.webp';
 
   @media screen and (max-width: 580px) {
     .proyectos {
-      padding: 0px;
+      padding: 20px 0px;
     }
   }
 </style>
