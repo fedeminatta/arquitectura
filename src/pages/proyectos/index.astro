@@ -5,6 +5,10 @@ import Layout from '@layouts/Layout.astro';
 ---
 
 <Layout title="proyectos">
+  <header>
+    <h1>Proyectos</h1>
+    <span>Estos son nuestros proyectos</span>
+  </header>
   <section>
     {
       proyectosArray.map((item) => (
@@ -19,6 +23,13 @@ import Layout from '@layouts/Layout.astro';
 </Layout>
 
 <style lang="scss">
+  header {
+    padding: 0 20px;
+
+    h1 {
+      color: rgb(241, 5, 72);
+    }
+  }
   section {
     padding: 40px;
     display: flex;
