@@ -1,0 +1,28 @@
+---
+import Proyects from '@components/Proyects.astro';
+import proyectosArray from '@utils/proyectos';
+import Layout from '@layouts/Layout.astro';
+---
+
+<Layout title="proyectos">
+  <section>
+    {
+      proyectosArray.map((item) => (
+        <Proyects
+          title={item.titulo}
+          description={item.description}
+          img={item.img}
+        />
+      ))
+    }
+  </section>
+</Layout>
+
+<style lang="scss">
+  section {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+    justify-content: center;
+  }
+</style>
