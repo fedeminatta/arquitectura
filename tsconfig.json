@@ -1,12 +1,14 @@
 {
   "extends": "astro/tsconfigs/strict",
   "compilerOptions": {
-    "baseUrl": ".",
+    "baseUrl": "C:/Users/Fede/Desktop/Fede/web/paginasAstro/arquitectura",
     "paths": {
       "@components/*": ["./src/components/*"],
       "@layouts/*": ["./src/layouts/*"],
-      "@img/*": ["./public/img/*"],
+      "@img/*": ["./src/img/*"],
       "@utils/*": ["./src/utils/*"]
-    }
+    },
+    "jsx": "react-jsx",
+    "jsxImportSource": "react"
   }
 }

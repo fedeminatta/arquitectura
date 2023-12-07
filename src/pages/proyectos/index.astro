@@ -2,6 +2,7 @@
 import Proyects from '@components/Proyects.astro';
 import proyectosArray from '@utils/proyectos';
 import Layout from '@layouts/Layout.astro';
+import ListProyects from '@components/ListProyects';
 ---
 
 <Layout title="proyectos">
@@ -10,15 +11,7 @@ import Layout from '@layouts/Layout.astro';
     <span>Estos son nuestros proyectos</span>
   </header>
   <section>
-    {
-      proyectosArray.map((item) => (
-        <Proyects
-          title={item.titulo}
-          description={item.description}
-          img={item.img}
-        />
-      ))
-    }
+    <ListProyects client:load />
   </section>
 </Layout>
 
