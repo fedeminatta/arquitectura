@@ -7,4 +7,10 @@ export default defineConfig({
   output: 'hybrid',
   adapter: vercel(),
   integrations: [react()],
+  alias: {
+    '@components': './src/components',
+    '@layouts': './src/layouts',
+    '@img': './src/img',
+    '@utils': './src/utils',
+  },
 });
