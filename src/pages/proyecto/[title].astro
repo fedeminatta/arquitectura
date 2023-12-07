@@ -1,7 +1,7 @@
 ---
 const { title } = Astro.params;
-import Layout from '@layouts/Layout.astro';
-import proyectosArray from '@utils/proyectos.ts';
+import Layout from '../../layouts/Layout.astro';
+import proyectosArray from '../../utils/proyectos';
 import { Image, getImage } from 'astro:assets';
 
 const objetosFiltrados = proyectosArray.filter(
