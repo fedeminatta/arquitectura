@@ -1,5 +1,5 @@
 import React from 'react';
-import proyectosArray from '@utils/proyectos';
+import proyectosArray from '@utils/proyectos.ts';
 import Proyects from '@components/Proyects.tsx';
 import { Slide } from 'react-awesome-reveal';
 import './ListProyects.scss';
