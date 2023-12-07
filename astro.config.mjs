@@ -8,9 +8,9 @@ export default defineConfig({
   adapter: vercel(),
   integrations: [react()],
   alias: {
-    '@components': './src/components/',
-    '@layouts': './src/layouts/',
-    '@img': './src/img/',
-    '@utils': './src/utils/',
+    '@components': '/components/',
+    '@layouts': '/layouts/',
+    '@img': '/img/',
+    '@utils': '/utils/',
   },
 });
