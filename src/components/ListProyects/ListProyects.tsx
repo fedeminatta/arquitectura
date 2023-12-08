@@ -18,7 +18,7 @@ function ListProyects({ slice }: ListProyectsProps) {
         <Slide direction="up" triggerOnce cascade damping={0} duration={400}>
           {proyectosArray.map((item) => (
             <Proyects
-              key={item.titulo}
+              key={Math.random()}
               title={item.titulo}
               description={item.description}
               img={item.img}
