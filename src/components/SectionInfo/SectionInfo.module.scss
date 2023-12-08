@@ -1,14 +1,16 @@
 .section {
   display: flex;
+  width: 90%;
   flex-wrap: wrap;
   gap: 10px;
-  margin: 40px 0;
+  margin: 40px auto;
+  border-radius: 8px;
   justify-content: center;
   align-content: center;
   align-items: center;
-  box-shadow: 0px 0px 6px #c901019c;
+  box-shadow: 0px 0px 6px #00000030;
   overflow: hidden;
-  background-color: #b20c35;
+  background-color: #ffffff;
   padding: 20px 0;
 
   .img {
