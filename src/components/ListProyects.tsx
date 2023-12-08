@@ -25,14 +25,7 @@ function ListProyects({ slice }: ListProyectsProps) {
   } else {
     return (
       <section className="proyectos">
-        <Slide
-          key={slideKey}
-          direction="up"
-          triggerOnce
-          cascade
-          damping={0}
-          duration={400}
-        >
+        <Slide direction="up" triggerOnce cascade damping={0} duration={400}>
           {proyectosArray.map((item) => (
             <Proyects
               key={item.titulo}
