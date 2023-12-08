@@ -10,7 +10,7 @@ interface Props {
 const SectionInfo = ({ title, description, img, right }: Props) => {
   return (
     <Fade triggerOnce direction={right ? 'right' : 'left'}>
-      <section className={styles.section}>
+      <section className={styles.section} id="acerca_de">
         <div className={styles.img}>
           <img src={img.src} alt={title} width={350} />
         </div>

@@ -1,0 +1,35 @@
+<nav>
+  <a href="#inicio">Inicio</a>
+  <a href="#acerca_de">Acerca de</a>
+  <a href="#nosotros">Nosotros</a>
+  <a href="#contacto">Contacto</a>
+</nav>
+
+<style lang="scss">
+  nav {
+    position: fixed;
+    padding: 10px;
+    display: flex;
+    grid-area: 30px;
+    justify-content: center;
+    background: #333;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+
+    a {
+      color: #fff;
+      text-decoration: none;
+      margin: 0 10px;
+      transition: scale 0.3s;
+      padding: 5px;
+      border-radius: 3px;
+      font-weight: 600;
+      &:hover {
+        scale: 1.08;
+        background: #fff;
+        color: rgb(241, 5, 72);
+      }
+    }
+  }
+</style>
