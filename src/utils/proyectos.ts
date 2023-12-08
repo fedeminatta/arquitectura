@@ -1,9 +1,9 @@
-import img1 from '../img/img1.webp';
-import img2 from '../img/img2.webp';
-import img3 from '../img/img3.webp';
-import img4 from '../img/img4.webp';
-import img5 from '../img/img5.webp';
-import img6 from '../img/img6.webp';
+import img1 from '@img/img1.webp';
+import img2 from '@img/img2.webp';
+import img3 from '@img/img3.webp';
+import img4 from '@img/img4.webp';
+import img5 from '@img/img5.webp';
+import img6 from '@img/img6.webp';
 
 interface ProyectoObj {
   titulo: string;
