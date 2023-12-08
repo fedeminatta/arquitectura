@@ -12,22 +12,20 @@ function ListProyects({ slice }: ListProyectsProps) {
   if (slice) {
     return (
       <section className="proyectos">
-        <Slide triggerOnce direction="left" cascade damping={0} duration={400}>
-          {proyectosArray.slice(0, 2).map((item) => (
-            <Proyects
-              key={item.titulo}
-              title={item.titulo}
-              description={item.description}
-              img={item.img}
-            />
-          ))}
-        </Slide>
+        {proyectosArray.slice(0, 2).map((item) => (
+          <Proyects
+            key={item.titulo}
+            title={item.titulo}
+            description={item.description}
+            img={item.img}
+          />
+        ))}
       </section>
     );
   } else {
     return (
       <section className="proyectos">
-        <Slide direction="up" cascade damping={0} duration={400}>
+        <Slide direction="up" triggerOnce cascade damping={0} duration={400}>
           {proyectosArray.map((item) => (
             <Proyects
               key={item.titulo}

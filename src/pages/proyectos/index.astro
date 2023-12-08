@@ -9,7 +9,7 @@ import ListProyects from '../../components/ListProyects.tsx';
     <span>Estos son nuestros proyectos</span>
   </header>
   <section>
-    <ListProyects client:visible />
+    <ListProyects client:load slice={false} />
   </section>
 </Layout>
 
