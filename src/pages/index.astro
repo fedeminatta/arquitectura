@@ -3,10 +3,12 @@ import Layout from '../layouts/Layout.astro';
 import headerImg from '../img/header.webp';
 import ListProyects from '../components/ListProyects/ListProyects';
 import SectionInfo from '../components/SectionInfo/SectionInfo';
+import Nosotros from '../components/Nosotros/Nosotros.astro';
 
 import img1 from '../img/img1.webp';
 import img2 from '../img/img2.webp';
 import img3 from '../img/img3.webp';
+
 export const prerender = false;
 ---
 
@@ -36,6 +38,8 @@ export const prerender = false;
     title="¿Por qué nosotros?"
     description="Te ofrecemos una atención personalizada que se ajusta a tu presupuesto y a tus requerimientos para otorgarte la casa que quieras tener, que sea pensada, planificada y adaptada desde sus cimientos para vos y tu familia. El método de construcción que usamos no sólo es innovador y de vanguardia acá en la región, sino que comparado con la construcción tradicional se emplea la mitad del tiempo y para el futuro cuenta con una gran facilidad a la hora de realizar reparaciones. Te garantizamos la mejor atención que existe en el mercado, al alcance de tu bolsillo"
   />
+
+  <Nosotros />
 </Layout>
 
 <style lang="scss">

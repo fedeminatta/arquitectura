@@ -1,5 +1,5 @@
 ---
-import Header from '../components/Header.astro';
+import Header from '../components/Header/Header.astro';
 import { ViewTransitions } from 'astro:transitions';
 interface Props {
   title: string;
@@ -35,6 +35,10 @@ export const prerender = false;
       html {
         font-family: system-ui, sans-serif;
         background: #fcfcfc;
+      }
+
+      body {
+        overflow-x: hidden;
       }
     </style>
   </body>

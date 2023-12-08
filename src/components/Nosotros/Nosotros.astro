@@ -1,0 +1,55 @@
+---
+import personImg1 from '../../img/descarga.jpeg';
+import personImg2 from '../../img/descarga2.jpeg';
+import personImg3 from '../../img/descarga3.jpeg';
+---
+
+<section>
+  <h2>Nustro Equipo</h2>
+  <article>
+    <img src={personImg1.src} alt="" />
+    <h3>María</h3>
+    <span>Arquitecta</span>
+  </article>
+  <article>
+    <img src={personImg2.src} alt="" />
+    <h3>Lorenzo</h3>
+    <span>Encargado de Obras</span>
+  </article>
+  <article>
+    <img src={personImg3.src} alt="" />
+    <h3>Fernando</h3>
+    <span>Administración</span>
+  </article>
+</section>
+
+<style lang="scss">
+  section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 30px;
+
+    h2 {
+      width: 100%;
+      text-align: center;
+    }
+
+    article {
+      color: #000;
+      cursor: initial;
+      display: flex;
+      flex-direction: column;
+      width: 300px;
+      overflow: hidden;
+      justify-content: center;
+      align-items: center;
+
+      img {
+        width: 100%;
+        border-radius: 3px;
+        cursor: initial;
+      }
+    }
+  }
+</style>
