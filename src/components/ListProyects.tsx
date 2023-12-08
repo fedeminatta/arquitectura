@@ -9,23 +9,41 @@ interface ListProyectsProps {
 }
 
 function ListProyects({ slice }: ListProyectsProps) {
+  const slideKey = slice ? 'sliceKey' : 'noSliceKey';
+
   if (slice) {
     return (
       <section className="proyectos">
-        {proyectosArray.slice(0, 2).map((item) => (
-          <Proyects
-            key={item.titulo}
-            title={item.titulo}
-            description={item.description}
-            img={item.img}
-          />
-        ))}
+        <Slide
+          key={slideKey}
+          direction="left"
+          triggerOnce
+          cascade
+          damping={0}
+          duration={400}
+        >
+          {proyectosArray.slice(0, 2).map((item) => (
+            <Proyects
+              key={item.titulo}
+              title={item.titulo}
+              description={item.description}
+              img={item.img}
+            />
+          ))}
+        </Slide>
       </section>
     );
   } else {
     return (
       <section className="proyectos">
-        <Slide direction="up" triggerOnce cascade damping={0} duration={400}>
+        <Slide
+          key={slideKey}
+          direction="up"
+          triggerOnce
+          cascade
+          damping={0}
+          duration={400}
+        >
           {proyectosArray.map((item) => (
             <Proyects
               key={item.titulo}
