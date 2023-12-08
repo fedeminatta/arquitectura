@@ -1,7 +1,12 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import headerImg from '../img/header.webp';
-import ListProyects from '../components/ListProyects';
+import ListProyects from '../components/ListProyects/ListProyects';
+import SectionInfo from '../components/SectionInfo/SectionInfo';
+
+import img1 from '../img/img1.webp';
+import img2 from '../img/img2.webp';
+import img3 from '../img/img3.webp';
 ---
 
 <Layout title="Arquitectura demo">
@@ -11,6 +16,25 @@ import ListProyects from '../components/ListProyects';
   </header>
 
   <ListProyects client:load slice={true} />
+  <SectionInfo
+    client:load
+    img={img1}
+    title="¿Quiénes somos?"
+    description="Nuestro sistema es rápido, ágil, seguro y de calidad. Trabajamos en barrios abiertos o privados, en zonas residenciales o lotes con servicios. Construimos casas para todos los días, de fin de semana y ampliaciones. "
+  />
+  <SectionInfo
+    client:load
+    img={img2}
+    title="¿Qué hacemos?"
+    description="Nuestro sistema es rápido, ágil, seguro y de calidad. Trabajamos en barrios abiertos o privados, en zonas residenciales o lotes con servicios. Construimos casas para todos los días, de fin de semana y ampliaciones"
+  />
+  <SectionInfo
+    client:load
+    right={true}
+    img={img3}
+    title="¿Por qué nosotros?"
+    description="Te ofrecemos una atención personalizada que se ajusta a tu presupuesto y a tus requerimientos para otorgarte la casa que quieras tener, que sea pensada, planificada y adaptada desde sus cimientos para vos y tu familia. El método de construcción que usamos no sólo es innovador y de vanguardia acá en la región, sino que comparado con la construcción tradicional se emplea la mitad del tiempo y para el futuro cuenta con una gran facilidad a la hora de realizar reparaciones. Te garantizamos la mejor atención que existe en el mercado, al alcance de tu bolsillo"
+  />
 </Layout>
 
 <style lang="scss">
