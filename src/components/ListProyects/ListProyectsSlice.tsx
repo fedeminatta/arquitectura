@@ -1,3 +1,4 @@
+import React from 'react';
 import proyectosArray from '../../utils/proyectos';
 import Proyects from '../Proyects/Proyects';
 import { Fade } from 'react-awesome-reveal';
