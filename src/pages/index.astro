@@ -15,7 +15,7 @@ import img3 from '../img/img3.webp';
     <img src={headerImg.src} alt="header imagen" />
   </header>
 
-  <ListProyects client:load slice={true} />
+  <ListProyects client:idle slice={true} />
   <SectionInfo
     client:load
     img={img1}
