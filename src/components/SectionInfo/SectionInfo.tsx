@@ -9,7 +9,6 @@ interface Props {
 }
 const SectionInfo = ({ title, description, img, right, bgColor }: Props) => {
   return (
-    // < triggerOnce direction={right ? 'right' : 'left'}>
     <section
       className={styles.section}
       id="acerca_de"
