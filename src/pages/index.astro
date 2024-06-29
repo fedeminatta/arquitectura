@@ -22,18 +22,21 @@ export const prerender = false;
   <ListProyects client:load slice={true} />
   <SectionInfo
     client:load
+    bgColor="#FBD9DB"
     img={img1}
     title="¿Quiénes somos?"
     description="Nuestro sistema es rápido, ágil, seguro y de calidad. Trabajamos en barrios abiertos o privados, en zonas residenciales o lotes con servicios. Construimos casas para todos los días, de fin de semana y ampliaciones. "
   />
   <SectionInfo
     client:load
+    bgColor="#bce19f"
     img={img2}
     title="¿Qué hacemos?"
     description="Nuestro sistema es rápido, ágil, seguro y de calidad. Trabajamos en barrios abiertos o privados, en zonas residenciales o lotes con servicios. Construimos casas para todos los días, de fin de semana y ampliaciones"
   />
   <SectionInfo
     client:load
+    bgColor="#ffd088"
     right={true}
     img={img3}
     title="¿Por qué nosotros?"
@@ -51,6 +54,7 @@ export const prerender = false;
     max-height: 70vh;
     width: 100%;
     overflow: hidden;
+    padding: 10px 20px;
 
     h1 {
       z-index: 100;
@@ -71,6 +75,7 @@ export const prerender = false;
       width: 100%;
       height: 100%;
       filter: brightness(85%);
+      border-radius: 20px;
     }
   }
 </style>
