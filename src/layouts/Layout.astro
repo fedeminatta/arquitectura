@@ -1,7 +1,8 @@
 ---
 import Header from '@components/Header/Header.astro';
-import Footer from '@components/Footer/Footer.astro';
+
 import { ViewTransitions } from 'astro:transitions';
+import 'aos/dist/aos.css';
 interface Props {
   title: string;
 }
@@ -24,7 +25,6 @@ export const prerender = false;
   <body>
     <Header />
     <slot />
-    <Footer />
     <style is:global>
       @import url('../pages/global.css');
       @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
@@ -36,7 +36,7 @@ export const prerender = false;
 
       html {
         font-family: system-ui, sans-serif;
-        background: #fcfcfc;
+        background: #f1ffe6;
         scroll-behavior: smooth;
       }
 
@@ -44,5 +44,15 @@ export const prerender = false;
         overflow-x: hidden;
       }
     </style>
+
+    <script>
+      import { aosInit } from '../utils/aos.js';
+
+      // runs on initial page load
+      aosInit();
+
+      // runs on view transitions navigation
+      document.addEventListener('astro:after-swap', aosInit);
+    </script>
   </body>
 </html>

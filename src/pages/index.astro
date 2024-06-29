@@ -5,6 +5,7 @@ import ListProyects from '@components/ListProyects/ListProyects';
 import SectionInfo from '@components/SectionInfo/SectionInfo';
 import Nosotros from '@components/Nosotros/Nosotros.astro';
 import Nav from '@components/Footer/Nav.astro';
+import Footer from '@components/Footer/Footer.astro';
 
 import img1 from '@img/img1.webp';
 import img2 from '@img/img2.webp';
@@ -15,7 +16,7 @@ export const prerender = false;
 
 <Layout title="Arquitectura demo">
   <header id="inicio">
-    <h1>Arquitectura</h1>
+    <h1 data-aos="fade-down-right">Arquitectura</h1>
     <img src={headerImg.src} alt="header imagen" />
   </header>
 
@@ -30,6 +31,7 @@ export const prerender = false;
   <SectionInfo
     client:load
     bgColor="#bce19f"
+    right={true}
     img={img2}
     title="¿Qué hacemos?"
     description="Nuestro sistema es rápido, ágil, seguro y de calidad. Trabajamos en barrios abiertos o privados, en zonas residenciales o lotes con servicios. Construimos casas para todos los días, de fin de semana y ampliaciones"
@@ -37,7 +39,6 @@ export const prerender = false;
   <SectionInfo
     client:load
     bgColor="#ffd088"
-    right={true}
     img={img3}
     title="¿Por qué nosotros?"
     description="Te ofrecemos una atención personalizada que se ajusta a tu presupuesto y a tus requerimientos para otorgarte la casa que quieras tener, que sea pensada, planificada y adaptada desde sus cimientos para vos y tu familia. El método de construcción que usamos no sólo es innovador y de vanguardia acá en la región, sino que comparado con la construcción tradicional se emplea la mitad del tiempo y para el futuro cuenta con una gran facilidad a la hora de realizar reparaciones. Te garantizamos la mejor atención que existe en el mercado, al alcance de tu bolsillo"
@@ -45,6 +46,7 @@ export const prerender = false;
 
   <Nosotros />
   <Nav />
+  <Footer />
 </Layout>
 
 <style lang="scss">
@@ -59,8 +61,8 @@ export const prerender = false;
     h1 {
       z-index: 100;
       position: absolute;
-      top: 50%;
-      left: 60%;
+      top: 25%;
+      left: 26%;
       transform: translate(-50%, -50%);
       color: #ec2165;
       text-shadow: 3px 3px #600221;
