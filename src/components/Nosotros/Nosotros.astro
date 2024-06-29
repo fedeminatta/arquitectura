@@ -6,17 +6,17 @@ import personImg3 from '@img/descarga3.jpeg';
 
 <section id="nosotros">
   <h2>Nustro Equipo</h2>
-  <article>
+  <article style={{ background: '#FBD9DB' }}>
     <img src={personImg1.src} alt="" />
     <h3>María</h3>
     <span>Arquitecta</span>
   </article>
-  <article>
+  <article style={{ background: '#bce19f' }}>
     <img src={personImg2.src} alt="" />
     <h3>Lorenzo</h3>
     <span>Encargado de Obras</span>
   </article>
-  <article>
+  <article style={{ background: '#ffd088' }}>
     <img src={personImg3.src} alt="" />
     <h3>Fernando</h3>
     <span>Administración</span>
@@ -28,13 +28,15 @@ import personImg3 from '@img/descarga3.jpeg';
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    gap: 20px;
     padding: 30px;
+    padding-top: 0;
 
     h2 {
       width: 100%;
       text-align: center;
+      margin-top: 0;
     }
-
     article {
       color: #000;
       cursor: initial;
@@ -44,7 +46,6 @@ import personImg3 from '@img/descarga3.jpeg';
       overflow: hidden;
       justify-content: center;
       align-items: center;
-
       img {
         width: 100%;
         border-radius: 3px;
