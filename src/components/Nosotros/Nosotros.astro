@@ -4,42 +4,48 @@ import personImg2 from '@img/descarga2.jpeg';
 import personImg3 from '@img/descarga3.jpeg';
 ---
 
-<section id="nosotros">
-  <h2>Nustro Equipo</h2>
-  <article
-    style={{ background: '#FBD9DB' }}
-    data-aos="fade-up"
-    data-aos-duration={500}
-    data-aos-delay={400}
-  >
-    <img src={personImg1.src} alt="" />
-    <h3>María</h3>
-    <span>Arquitecta</span>
-  </article>
-  <article
-    style={{ background: '#bce19f' }}
-    data-aos="fade-up"
-    data-aos-duration={500}
-    data-aos-delay={600}
-  >
-    <img src={personImg2.src} alt="" />
-    <h3>Lorenzo</h3>
-    <span>Encargado de Obras</span>
-  </article>
-  <article
-    style={{ background: '#ffd088' }}
-    data-aos="fade-up"
-    data-aos-duration={500}
-    data-aos-delay={800}
-  >
-    <img src={personImg3.src} alt="" />
-    <h3>Fernando</h3>
-    <span>Administración</span>
-  </article>
+<section id="equipo" class="py-12 px-4 bg-white rounded-lg shadow-lg mx-auto max-w-6xl my-8">
+  <h2 class="text-4xl font-extrabold text-center text-gray-800 mb-10">Conoce a Nuestro Equipo</h2>
+  <div class="flex flex-wrap justify-center gap-8">
+    <article
+      class="flex flex-col items-center text-center p-6 rounded-lg shadow-md transition-transform transform hover:scale-105"
+      style={{ background: '#FBD9DB' }}
+      data-aos="fade-up"
+      data-aos-duration={500}
+      data-aos-delay={400}
+    >
+      <img src={personImg1.src} alt="María, Agente Inmobiliaria" class="w-40 h-40 object-cover rounded-full mb-4 border-4 border-white shadow-md" />
+      <h3 class="text-2xl font-bold text-gray-800">María</h3>
+      <span class="text-lg text-gray-600">Agente Inmobiliaria Senior</span>
+    </article>
+    <article
+      class="flex flex-col items-center text-center p-6 rounded-lg shadow-md transition-transform transform hover:scale-105"
+      style={{ background: '#bce19f' }}
+      data-aos="fade-up"
+      data-aos-duration={500}
+      data-aos-delay={600}
+    >
+      <img src={personImg2.src} alt="Lorenzo, Asesor Legal" class="w-40 h-40 object-cover rounded-full mb-4 border-4 border-white shadow-md" />
+      <h3 class="text-2xl font-bold text-gray-800">Lorenzo</h3>
+      <span class="text-lg text-gray-600">Asesor Legal Inmobiliario</span>
+    </article>
+    <article
+      class="flex flex-col items-center text-center p-6 rounded-lg shadow-md transition-transform transform hover:scale-105"
+      style={{ background: '#ffd088' }}
+      data-aos="fade-up"
+      data-aos-duration={500}
+      data-aos-delay={800}
+    >
+      <img src={personImg3.src} alt="Fernando, Especialista en Marketing" class="w-40 h-40 object-cover rounded-full mb-4 border-4 border-white shadow-md" />
+      <h3 class="text-2xl font-bold text-gray-800">Fernando</h3>
+      <span class="text-lg text-gray-600">Especialista en Marketing Digital</span>
+    </article>
+  </div>
 </section>
 
 <style lang="scss">
-  section {
+  /* Mantener estilos SCSS existentes si no se refactorizan a Tailwind */
+  /* section {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -67,5 +73,5 @@ import personImg3 from '@img/descarga3.jpeg';
         cursor: initial;
       }
     }
-  }
+  } */
 </style>

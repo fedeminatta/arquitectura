@@ -3,6 +3,8 @@ import Header from '@components/Header/Header.astro';
 
 import { ViewTransitions } from 'astro:transitions';
 import 'aos/dist/aos.css';
+import '@styles/tailwind.css'; // Importar Tailwind CSS
+
 interface Props {
   title: string;
 }
@@ -15,7 +17,7 @@ export const prerender = false;
 <html lang="es">
   <head>
     <meta charset="UTF-8" />
-    <meta name="description" content="Arquitectura" />
+    <meta name="description" content="Inmobiliaria Demo" />
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <ViewTransitions />

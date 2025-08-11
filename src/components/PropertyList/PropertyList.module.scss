@@ -1,0 +1,13 @@
+.proyectos {
+  padding: 40px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+}
+
+@media screen and (max-width: 580px) {
+  .proyectos {
+    padding: 20px 0px;
+  }
+}

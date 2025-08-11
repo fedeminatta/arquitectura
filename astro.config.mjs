@@ -1,16 +1,18 @@
 import { defineConfig } from 'astro/config';
 import vercel from '@astrojs/vercel';
 import react from '@astrojs/react';
+import tailwind from '@astrojs/tailwind'; // Importar tailwind
 
 // https://astro.build/config
 export default defineConfig({
   output: 'server',
   adapter: vercel(),
-  integrations: [react()],
+  integrations: [react(), tailwind()], // Añadir tailwind a las integraciones
   alias: {
-    '@components': '/components/',
-    '@layouts': '/layouts/',
-    '@img': '/img/',
-    '@utils': '/utils/',
+    '@components': '/src/components/',
+    '@layouts': '/src/layouts/',
+    '@img': '/src/img/',
+    '@utils': '/src/utils/',
+    '@styles': '/src/styles/', // Añadir alias para estilos
   },
 });

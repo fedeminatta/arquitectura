@@ -1,0 +1,48 @@
+---
+import Layout from '@layouts/Layout.astro';
+import PropertyList from '@components/PropertyList/PropertyList';
+export const prerender = false;
+
+const description: string = `Bienvenido a nuestra galería de propiedades, donde la visión de su hogar ideal se encuentra con la realidad. Nos enorgullece presentar una selección de nuestras propiedades más destacadas que reflejan nuestra dedicación a la excelencia en el mercado inmobiliario.
+
+Cada propiedad que ofrecemos es una manifestación de calidad y experiencia, fusionando estilos contemporáneos con soluciones inteligentes y sostenibles. Entendemos que cada hogar tiene una historia que contar y cada espacio debe ser una expresión única de su propósito.`;
+---
+
+<Layout title="Propiedades">
+  <header class="px-5 py-10 text-center bg-white shadow-md rounded-lg mx-auto max-w-4xl mt-8">
+    <h1 class="text-4xl md:text-5xl font-extrabold text-pink-600 mb-4">Galería de Propiedades</h1>
+    <p class="text-lg md:text-xl text-gray-700 leading-relaxed whitespace-pre-line">
+      {description}
+    </p>
+  </header>
+  <section class="py-10">
+    <PropertyList client:load slice={false} />
+  </section>
+</Layout>
+
+<style lang="scss">
+  /* Mantener estilos SCSS existentes si no se refactorizan a Tailwind */
+  /* header {
+    padding: 0 20px;
+
+    h1 {
+      color: rgb(241, 5, 72);
+      font-size: 35px;
+    }
+
+    p {
+      font-size: 18px;
+      font-weight: 500;
+      white-space: pre;
+      text-wrap: balance;
+      max-width: 70ch;
+    }
+  } */
+  section {
+    padding: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+    justify-content: center;
+  }
+</style>

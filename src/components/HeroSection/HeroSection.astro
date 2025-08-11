@@ -1,0 +1,26 @@
+---
+import { Image } from 'astro:assets';
+import headerImg from '@img/header.webp';
+---
+
+<section id="inicio" class="relative w-full h-[70vh] md:h-[80vh] overflow-hidden flex items-center justify-center text-center">
+  <Image
+    src={headerImg}
+    alt="Fondo de Inmobiliaria"
+    class="absolute inset-0 w-full h-full object-cover object-center filter brightness-75"
+    widths={[480, 768, 1024, 1440]}
+    sizes="(max-width: 768px) 100vw, 100vw"
+    loading="eager"
+  />
+  <div class="relative z-10 p-4 md:p-8 text-white" data-aos="fade-up" data-aos-duration="1000">
+    <h1 class="text-4xl md:text-7xl font-extrabold leading-tight drop-shadow-lg mb-4">
+      Encuentra Tu Hogar Ideal
+    </h1>
+    <p class="text-lg md:text-2xl font-medium drop-shadow-md max-w-3xl mx-auto">
+      Tu búsqueda termina aquí. Descubre propiedades que se ajustan a tus sueños y necesidades.
+    </p>
+    <a href="/properties" class="mt-8 inline-block bg-pink-600 hover:bg-pink-700 text-white font-bold py-3 px-8 rounded-full transition duration-300 ease-in-out shadow-lg text-lg">
+      Ver Propiedades
+    </a>
+  </div>
+</section>

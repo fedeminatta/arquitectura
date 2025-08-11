@@ -1,11 +1,12 @@
 ---
 import Layout from '@layouts/Layout.astro';
-import headerImg from '@img/header.webp';
-import ListProyects from '@components/ListProyects/ListProyects';
+import HeroSection from '@components/HeroSection/HeroSection.astro';
+import PropertyList from '@components/PropertyList/PropertyList';
 import SectionInfo from '@components/SectionInfo/SectionInfo';
 import Nosotros from '@components/Nosotros/Nosotros.astro';
 import Nav from '@components/Footer/Nav.astro';
 import Footer from '@components/Footer/Footer.astro';
+import CallToAction from '@components/CallToAction/CallToAction.astro';
 
 import img1 from '@img/img1.webp';
 import img2 from '@img/img2.webp';
@@ -14,43 +15,51 @@ import img3 from '@img/img3.webp';
 export const prerender = false;
 ---
 
-<Layout title="Arquitectura demo">
-  <header id="inicio">
-    <h1 data-aos="fade-down-right">Arquitectura</h1>
-    <img src={headerImg.src} alt="header imagen" />
-  </header>
+<Layout title="Inmobiliaria Demo">
+  <HeroSection />
 
-  <ListProyects client:load slice={true} />
+  <section class="py-12 px-4">
+    <h2 class="text-4xl font-extrabold text-center text-gray-800 mb-10">Propiedades Destacadas</h2>
+    <PropertyList client:load slice={true} />
+    <div class="text-center mt-8">
+      <a href="/properties" class="inline-block bg-pink-600 hover:bg-pink-700 text-white font-bold py-3 px-6 rounded-full transition duration-300 ease-in-out shadow-lg">
+        Ver Todas las Propiedades
+      </a>
+    </div>
+  </section>
+
   <SectionInfo
     client:load
     bgColor="#FBD9DB"
     img={img1}
-    title="¿Quiénes somos?"
-    description="Nuestro sistema es rápido, ágil, seguro y de calidad. Trabajamos en barrios abiertos o privados, en zonas residenciales o lotes con servicios. Construimos casas para todos los días, de fin de semana y ampliaciones. "
+    title="Nuestros Servicios"
+    description="Ofrecemos una gama completa de servicios inmobiliarios, desde la compra y venta de propiedades residenciales y comerciales hasta el alquiler y la gestión de propiedades. Nuestro equipo de expertos te guiará en cada paso del proceso, asegurando una experiencia fluida y exitosa."
   />
   <SectionInfo
     client:load
     bgColor="#bce19f"
     right={true}
     img={img2}
-    title="¿Qué hacemos?"
-    description="Nuestro sistema es rápido, ágil, seguro y de calidad. Trabajamos en barrios abiertos o privados, en zonas residenciales o lotes con servicios. Construimos casas para todos los días, de fin de semana y ampliaciones"
+    title="Proceso Simplificado"
+    description="Simplificamos el proceso de compra o venta de tu propiedad. Desde la valoración inicial hasta la firma final, te proporcionamos asesoramiento experto, marketing efectivo y negociación profesional para asegurar los mejores resultados. Tu tranquilidad es nuestra prioridad."
   />
   <SectionInfo
     client:load
     bgColor="#ffd088"
     img={img3}
-    title="¿Por qué nosotros?"
-    description="Te ofrecemos una atención personalizada que se ajusta a tu presupuesto y a tus requerimientos para otorgarte la casa que quieras tener, que sea pensada, planificada y adaptada desde sus cimientos para vos y tu familia. El método de construcción que usamos no sólo es innovador y de vanguardia acá en la región, sino que comparado con la construcción tradicional se emplea la mitad del tiempo y para el futuro cuenta con una gran facilidad a la hora de realizar reparaciones. Te garantizamos la mejor atención que existe en el mercado, al alcance de tu bolsillo"
+    title="Por Qué Elegirnos"
+    description="Nos destacamos por nuestra atención personalizada, conocimiento profundo del mercado local y un compromiso inquebrantable con la satisfacción del cliente. Te ofrecemos soluciones a medida, transparencia total y un equipo dedicado a hacer realidad tus sueños inmobiliarios. Confía en nosotros para tu próxima inversión."
   />
 
   <Nosotros />
+  <CallToAction />
   <Nav />
   <Footer />
 </Layout>
 
 <style lang="scss">
-  header {
+  /* Mantener estilos SCSS existentes si no se refactorizan a Tailwind */
+  /* header {
     position: relative;
     aspect-ratio: 16/9;
     max-height: 70vh;
@@ -79,5 +88,5 @@ export const prerender = false;
       filter: brightness(85%);
       border-radius: 20px;
     }
-  }
+  } */
 </style>

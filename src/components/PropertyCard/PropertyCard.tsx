@@ -1,13 +1,13 @@
-import styles from './Proyects.module.scss';
+import styles from './PropertyCard.module.scss';
 
 interface Props {
-  title: string;
-  description: string;
+  propertyName: string;
+  propertyDescription: string;
   img: any;
   index: number;
 }
 
-const Proyects = ({ title, description, img, index }: Props) => {
+const PropertyCard = ({ propertyName, propertyDescription, img, index }: Props) => {
   return (
     <div
       className={styles.card}
@@ -15,15 +15,15 @@ const Proyects = ({ title, description, img, index }: Props) => {
       data-aos-duration={700}
       data-aos-delay={index * 200 + 400}
     >
-      <a href={`/proyecto/${title}`}>
+      <a href={`/property/${propertyName}`}>
         <article style={{ backgroundImage: `url(${img.src})` }}>
           <div className={styles.text}>
-            <h2>{title}</h2>
-            <p>{description}</p>
+            <h2>{propertyName}</h2>
+            <p>{propertyDescription}</p>
           </div>
         </article>
       </a>
     </div>
   );
 };
-export default Proyects;
+export default PropertyCard;
