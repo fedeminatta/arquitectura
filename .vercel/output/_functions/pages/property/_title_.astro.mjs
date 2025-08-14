@@ -1,6 +1,6 @@
 import { c as createComponent, b as createAstro, r as renderComponent, a as renderTemplate, m as maybeRenderHead } from '../../chunks/astro/server_Cs1THcPs.mjs';
 import 'kleur/colors';
-import { p as propertiesArray, $ as $$Layout } from '../../chunks/properties_Aa0lrP3x.mjs';
+import { p as propertiesArray, $ as $$Layout } from '../../chunks/properties_CZs4fJj0.mjs';
 import { b as getImage, $ as $$Image } from '../../chunks/_astro_assets_DgtWP-e6.mjs';
 export { renderers } from '../../renderers.mjs';
 

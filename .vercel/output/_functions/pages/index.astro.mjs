@@ -1,9 +1,9 @@
 import { c as createComponent, m as maybeRenderHead, r as renderComponent, a as renderTemplate, d as addAttribute } from '../chunks/astro/server_Cs1THcPs.mjs';
 import 'kleur/colors';
-import { $ as $$Layout, i as img1, a as img2, b as img3 } from '../chunks/properties_Aa0lrP3x.mjs';
+import { $ as $$Layout, i as img1, a as img2, b as img3 } from '../chunks/properties_CZs4fJj0.mjs';
 import '../chunks/index_CVC0tT_4.mjs';
 import { $ as $$Image } from '../chunks/_astro_assets_DgtWP-e6.mjs';
-import { P as PropertyList } from '../chunks/PropertyList_Ds_U3y1C.mjs';
+import { P as PropertyList } from '../chunks/PropertyList_znp1YuQl.mjs';
 import { jsxs, jsx } from 'react/jsx-runtime';
 import { s as styles } from '../chunks/index.95d291e9_DL112LFP.mjs';
 import 'clsx';
@@ -36,10 +36,9 @@ const SectionInfo = ({ title, description, img, right, bgColor }) => {
   return /* @__PURE__ */ jsxs(
     "section",
     {
-      className: styles.section,
+      className: `${styles.section} transition-all duration-700 ease-in-out`,
       id: "acerca_de",
       style: { backgroundColor: bgColor },
-      "data-aos": `fade-${right ? "right" : "left"}`,
       children: [
         /* @__PURE__ */ jsx("div", { className: styles.img, children: /* @__PURE__ */ jsx("img", { src: img.src, alt: title, width: 350 }) }),
         /* @__PURE__ */ jsxs(

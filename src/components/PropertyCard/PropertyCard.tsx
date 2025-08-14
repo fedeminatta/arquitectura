@@ -10,10 +10,7 @@ interface Props {
 const PropertyCard = ({ propertyName, propertyDescription, img, index }: Props) => {
   return (
     <div
-      className={styles.card}
-      data-aos="fade-up"
-      data-aos-duration={700}
-      data-aos-delay={index * 200 + 400}
+      className={`${styles.card} transition-all duration-700 ease-in-out hover:scale-105`}
     >
       <a href={`/property/${propertyName}`}>
         <article style={{ backgroundImage: `url(${img.src})` }}>

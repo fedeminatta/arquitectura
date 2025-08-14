@@ -10,10 +10,9 @@ interface Props {
 const SectionInfo = ({ title, description, img, right, bgColor }: Props) => {
   return (
     <section
-      className={styles.section}
+      className={`${styles.section} transition-all duration-700 ease-in-out`}
       id="acerca_de"
       style={{ backgroundColor: bgColor }}
-      data-aos={`fade-${right ? 'right' : 'left'}`}
     >
       <div className={styles.img}>
         <img src={img.src} alt={title} width={350} />
