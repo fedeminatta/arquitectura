@@ -1,4 +1,4 @@
-import React from 'react';
+
 import propertiesArray from '@utils/properties';
 import PropertyCard from '@components/PropertyCard/PropertyCard';
 import styles from './PropertyList.module.scss';

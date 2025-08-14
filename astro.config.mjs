@@ -7,9 +7,14 @@ import tailwindcss from '@tailwindcss/vite';
 export default defineConfig({
   output: 'server',
   adapter: vercel(),
-  integrations: [react()],
+  integrations: [react({
+    include: ['**/react/*', '**/components/**/*'],
+  })],
   vite: {
     plugins: [tailwindcss()],
+    optimizeDeps: {
+      include: ['react', 'react-dom']
+    },
   },
   alias: {
     '@components': '/src/components/',

@@ -10,7 +10,7 @@ interface Props {
 const SectionInfo = ({ title, description, img, right, bgColor }: Props) => {
   return (
     <section
-      className={`${styles.section} transition-all duration-700 ease-in-out`}
+      className={`${styles.section} motion-preset-slide-${right ? 'right' : 'left'} motion-duration-700`}
       id="acerca_de"
       style={{ backgroundColor: bgColor }}
     >
