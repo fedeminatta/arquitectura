@@ -20,11 +20,11 @@
 			"dest": "_render"
 		},
 		{
-			"src": "^/proyecto/([^/]+?)/?$",
+			"src": "^/properties/?$",
 			"dest": "_render"
 		},
 		{
-			"src": "^/proyectos/?$",
+			"src": "^/property/([^/]+?)/?$",
 			"dest": "_render"
 		},
 		{
