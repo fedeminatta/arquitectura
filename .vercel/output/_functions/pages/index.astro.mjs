@@ -1,9 +1,9 @@
-import { c as createComponent, m as maybeRenderHead, r as renderComponent, a as renderTemplate, d as addAttribute } from '../chunks/astro/server_BN8jMKBt.mjs';
+import { c as createComponent, m as maybeRenderHead, r as renderComponent, a as renderTemplate, d as addAttribute } from '../chunks/astro/server_Cs1THcPs.mjs';
 import 'kleur/colors';
-import { $ as $$Layout, i as img1, a as img2, b as img3 } from '../chunks/properties_Crmj3Ypg.mjs';
+import { $ as $$Layout, i as img1, a as img2, b as img3 } from '../chunks/properties_Aa0lrP3x.mjs';
 import '../chunks/index_CVC0tT_4.mjs';
-import { $ as $$Image } from '../chunks/_astro_assets_Bgq8eylA.mjs';
-import { P as PropertyList } from '../chunks/PropertyList_-Imo9DIB.mjs';
+import { $ as $$Image } from '../chunks/_astro_assets_DgtWP-e6.mjs';
+import { P as PropertyList } from '../chunks/PropertyList_Ds_U3y1C.mjs';
 import { jsxs, jsx } from 'react/jsx-runtime';
 import { s as styles } from '../chunks/index.95d291e9_DL112LFP.mjs';
 import 'clsx';

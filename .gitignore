@@ -20,5 +20,12 @@ pnpm-debug.log*
 # macOS-specific files
 .DS_Store
 
+# Vercel
+.vercel
+
+# Package managers
+pnpm-lock.yaml
+yarn.lock
+
 # other
 private

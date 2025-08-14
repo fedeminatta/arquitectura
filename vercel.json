@@ -1,8 +1,0 @@
-{
-  "framework": "astro",
-  "functions": {
-    ".vercel/output/_functions/*.mjs": {
-      "runtime": "nodejs22.x"
-    }
-  }
-}
