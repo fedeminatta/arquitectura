@@ -1,0 +1,92 @@
+---
+import Layout from '@layouts/Layout.astro';
+import HeroSection from '@components/HeroSection/HeroSection.astro';
+import PropertyList from '@components/PropertyList/PropertyList';
+import SectionInfo from '@components/SectionInfo/SectionInfo';
+import Nosotros from '@components/Nosotros/Nosotros.astro';
+import Nav from '@components/Footer/Nav.astro';
+import Footer from '@components/Footer/Footer.astro';
+import CallToAction from '@components/CallToAction/CallToAction.astro';
+
+import img1 from '@img/img1.webp';
+import img2 from '@img/img2.webp';
+import img3 from '@img/img3.webp';
+
+export const prerender = false;
+---
+
+<Layout title="Inmobiliaria Demo">
+  <HeroSection />
+
+  <section class="py-12 px-4">
+    <h2 class="text-4xl font-extrabold text-center text-gray-800 mb-10">Propiedades Destacadas</h2>
+    <PropertyList client:visible slice={true} />
+    <div class="text-center mt-8">
+      <a href="/properties" class="inline-block bg-pink-600 hover:bg-pink-700 text-white font-bold py-3 px-6 rounded-full transition duration-300 ease-in-out shadow-lg">
+        Ver Todas las Propiedades
+      </a>
+    </div>
+  </section>
+
+  <SectionInfo
+    client:visible
+    bgColor="#FBD9DB"
+    img={img1}
+    title="Nuestros Servicios"
+    description="Ofrecemos una gama completa de servicios inmobiliarios, desde la compra y venta de propiedades residenciales y comerciales hasta el alquiler y la gestión de propiedades. Nuestro equipo de expertos te guiará en cada paso del proceso, asegurando una experiencia fluida y exitosa."
+  />
+  <SectionInfo
+    client:visible
+    bgColor="#bce19f"
+    right={true}
+    img={img2}
+    title="Proceso Simplificado"
+    description="Simplificamos el proceso de compra o venta de tu propiedad. Desde la valoración inicial hasta la firma final, te proporcionamos asesoramiento experto, marketing efectivo y negociación profesional para asegurar los mejores resultados. Tu tranquilidad es nuestra prioridad."
+  />
+  <SectionInfo
+    client:visible
+    bgColor="#ffd088"
+    img={img3}
+    title="Por Qué Elegirnos"
+    description="Nos destacamos por nuestra atención personalizada, conocimiento profundo del mercado local y un compromiso inquebrantable con la satisfacción del cliente. Te ofrecemos soluciones a medida, transparencia total y un equipo dedicado a hacer realidad tus sueños inmobiliarios. Confía en nosotros para tu próxima inversión."
+  />
+
+  <Nosotros />
+  <CallToAction />
+  <Nav />
+  <Footer />
+</Layout>
+
+<style lang="scss">
+  /* Mantener estilos SCSS existentes si no se refactorizan a Tailwind */
+  /* header {
+    position: relative;
+    aspect-ratio: 16/9;
+    max-height: 70vh;
+    width: 100%;
+    overflow: hidden;
+    padding: 10px 20px;
+
+    h1 {
+      z-index: 100;
+      position: absolute;
+      top: 25%;
+      left: 26%;
+      transform: translate(-50%, -50%);
+      color: #ec2165;
+      text-shadow: 3px 3px #600221;
+      font-size: clamp(1.125rem, -0.0469rem + 8.22vw, 8.025rem);
+      text-transform: uppercase;
+      font-weight: 800;
+      font-style: italic;
+    }
+    img {
+      object-fit: cover;
+      object-position: center;
+      width: 100%;
+      height: 100%;
+      filter: brightness(85%);
+      border-radius: 20px;
+    }
+  } */
+</style>
